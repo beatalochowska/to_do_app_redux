@@ -111,15 +111,26 @@ function App() {
     }
     return taskList.map((taskData, index) => (
       <Styled.ListElement key={index}>
-        <Styled.ListElementText>{taskData.title}</Styled.ListElementText>
         {taskData.completed === false ? (
-          <Styled.DoneButton onClick={() => handleStatusDone(index)}>
-            Done
-          </Styled.DoneButton>
+          <>
+            <Styled.ListElementTextIncompleted>
+              {taskData.title}
+            </Styled.ListElementTextIncompleted>
+            <Styled.DoneCheck
+              onClick={() => handleStatusDone(index)}
+              className="fas fa-check"
+            ></Styled.DoneCheck>
+          </>
         ) : (
-          <Styled.DeleteButton onClick={() => handleDelete(index)}>
-            Delete task
-          </Styled.DeleteButton>
+          <>
+            <Styled.ListElementTextCompleted>
+              {taskData.title}
+            </Styled.ListElementTextCompleted>
+            <Styled.DeleteCheck
+              onClick={() => handleDelete(index)}
+              className="fas fa-times"
+            ></Styled.DeleteCheck>
+          </>
         )}
       </Styled.ListElement>
     ));

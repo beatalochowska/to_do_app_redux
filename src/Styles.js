@@ -71,16 +71,14 @@ export const List = styled.ul`
 
 export const ListElement = styled.li`
   display: flex;
-  flex-direction: column;
+
   align-items: center;
   margin-bottom: 1.5em;
 `;
 
 export const ListElementText = styled.p`
-  background-color: #e4e5f2;
   border-radius: 0.5em;
   font-size: 1.5em;
-  color: #26309e;
   height: auto;
   width: 30vw;
   padding: 1em 2em;
@@ -90,29 +88,36 @@ export const ListElementText = styled.p`
   }
 `;
 
-export const Button = styled.button`
-  font-size: 1.2em;
-  height: auto;
-  width: auto;
-  padding: 0.5em 1em;
-  background-color: #fff;
-  border-radius: 0.5em;
-  transition: background-color 0.3s ease-in-out;
+export const ListElementTextIncompleted = styled(ListElementText)`
+  background-color: #e4e5f2;
+  color: #26309e;
 `;
 
-export const DoneButton = styled(Button)`
-  color: #097509;
-  border: solid 1px #097509;
+export const ListElementTextCompleted = styled(ListElementText)`
+  background-color: gray;
+  text-decoration: line-through;
+  color: black;
+`;
 
+export const Button = styled.i`
+  color: black;
+  font-size: 3em;
+  opacity: 0.5;
+  transition: 0.3s ease-in-out;
+  margin-left: 1em;
   &:hover {
-    background-color: #c5ebc5;
+    opacity: 1;
   }
 `;
 
-export const DeleteButton = styled(Button)`
-  color: #c21021;
-  border: solid 1px #c21021;
+export const DoneCheck = styled(Button)`
   &:hover {
-    background-color: #f7cbcf;
+    color: #097509;
+  }
+`;
+
+export const DeleteCheck = styled(Button)`
+  &:hover {
+    color: red;
   }
 `;
