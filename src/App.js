@@ -44,7 +44,7 @@ function App() {
           dispatch(errorDataLoadingActionCreator());
         });
     }
-  }, [dispatch, dataStatus.isDataLoaded]);
+  }, [dispatch, dataStatus.isDataLoaded, dataStatus.isDataLoading]);
 
   const handleSubmit = event => {
     event.preventDefault();
