@@ -81,7 +81,7 @@ export const ListElementText = styled.p`
   font-size: 1.5em;
   height: auto;
   width: 30vw;
-  padding: 1em 2em;
+  padding: 1em 2vw;
   margin: 0.5em 0;
   @media (max-width: 500px) {
     width: 90vw;
@@ -94,9 +94,9 @@ export const ListElementTextIncompleted = styled(ListElementText)`
 `;
 
 export const ListElementTextCompleted = styled(ListElementText)`
-  background-color: gray;
+  background-color: #d1d1d1;
   text-decoration: line-through;
-  color: black;
+  color: #5e5e5e;
 `;
 
 export const Button = styled.i`
@@ -120,4 +120,27 @@ export const DeleteCheck = styled(Button)`
   &:hover {
     color: red;
   }
+`;
+
+export const TaskIndex = styled.div`
+  font-size: 1.5em;
+  border-radius: 50%;
+
+  margin: 20px;
+  padding: 0.5em;
+  height: 2.3em;
+  width: 2.3em;
+  text-align: center;
+`;
+
+export const TaskIndexIncompleted = styled(TaskIndex)`
+  color: #26309e;
+  border: 2px solid #26309e;
+  background-color: #e4e5f2;
+`;
+
+export const TaskIndexCompleted = styled(TaskIndex)`
+  color: #5e5e5e;
+  border: 1px solid #5e5e5e;
+  background-color: #d1d1d1;
 `;

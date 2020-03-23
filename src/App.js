@@ -113,6 +113,10 @@ function App() {
       <Styled.ListElement key={index}>
         {taskData.completed === false ? (
           <>
+            <Styled.TaskIndexIncompleted>
+              {" "}
+              {index + 1}{" "}
+            </Styled.TaskIndexIncompleted>
             <Styled.ListElementTextIncompleted>
               {taskData.title}
             </Styled.ListElementTextIncompleted>
@@ -123,6 +127,7 @@ function App() {
           </>
         ) : (
           <>
+            <Styled.TaskIndexCompleted> {index + 1} </Styled.TaskIndexCompleted>
             <Styled.ListElementTextCompleted>
               {taskData.title}
             </Styled.ListElementTextCompleted>
